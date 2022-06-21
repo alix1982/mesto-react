@@ -23,11 +23,17 @@ class Main extends React.Component {
           userAvatar: res.avatar
         })
       })
+      .catch((err) => {
+        console.log(err)
+      })
     api.getCards ()
       .then ((res) => {
         this.setState ({
           cards: res,
         })
+      })
+      .catch((err) => {
+        console.log(err)
       })
   }
 
