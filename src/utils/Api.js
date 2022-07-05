@@ -17,8 +17,8 @@ class Api {
       method: 'PATCH',
       headers: this.heading,
       body: JSON.stringify({
-        name: inputList.userName,
-        about: inputList.userDescription,
+        name: inputList.name,
+        about: inputList.about,
         //avatar: inputList.linkAvatar,
       })
     })
@@ -31,7 +31,7 @@ class Api {
       method: 'POST',
       headers: this.heading,
       body: JSON.stringify({
-        name: inputList.title,
+        name: inputList.name,
         link: inputList.link
       })
     })
@@ -39,12 +39,12 @@ class Api {
     )
   };
 
-  patchUserAvatar = (inputList) => {
+  patchUserAvatar = (linkAvatar) => {
     return (fetch(`${this.url}/users/me/avatar`, {
       method: 'PATCH',
       headers: this.heading,
        body: JSON.stringify({
-         avatar: inputList.linkAvatar,
+         avatar: linkAvatar,
       })
     })
       .then(res => this._getStatus(res))

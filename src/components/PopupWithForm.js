@@ -7,12 +7,12 @@ function PopupWithForm (props) {
       <div className={`popup${props.name}__cell`}>
         <button className="popup__close" type="button" onClick = {props.onClose}>
         </button>
-        <form className={`form form${props.name}`} name={`form${props.name}`} noValidate>
+        <form className={`form form${props.name}`} name={`form${props.name}`} type="submit" onSubmit={(e)=>{props.onSubmit(e)}} noValidate>
           <h2 className={`popup${props.name}__heading`}>
             {props.title}
           </h2>
           {props.children}
-          <button className={`form__save form${props.name}__save`} type="submit">
+          <button className={`form__save form${props.name}__save`} >
             {props.buttonText}
           </button>
         </form>
