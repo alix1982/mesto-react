@@ -1,13 +1,10 @@
 import React from 'react';
-//import avatar from '../images/avatar.png';
-//import api from '../utils/Api.js';
 import Card from './Card.js';
 import {CurrentUserContext, currentUserContext} from '../contexts/CurrentUserContext.js';
-//import {CurrentCardContext, currentCardContext} from '../contexts/CurrentCardContext.js';
 
 function Main (props) {
   const userContext = React.useContext(CurrentUserContext);
-  //const cardContext = React.useContext(CurrentCardContext);
+
   return (
     <main className="content">
       <section className="profile" aria-label="профиль">
