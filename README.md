@@ -15,4 +15,4 @@
 4. Необходимо реализовать валидацию форм и отключении кнопок Submita (реализовано в следующей версии проекта react-mesto-api-full).
 
  
- [Ссылка на проект](https://github.com/alix1982/mesto-react)
+ [Ссылка на проект в GitHub](https://github.com/alix1982/mesto-react)
